@@ -23,8 +23,8 @@ const ticker       = require('./public/javascripts/ticker');
 // ----------------------------------------------------------------------------
 
 // View engine
+app.set('view engine', 'pug');
 app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'hbs');
 // ----------------------------------------------------------------------------
 
 // Middleware for every path
@@ -37,7 +37,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 // ----------------------------------------------------------------------------
 
 // Middleware for specific path
-app.use('/', routes);
+app.use(routes);
 app.use('/users', users);
 // ----------------------------------------------------------------------------
 

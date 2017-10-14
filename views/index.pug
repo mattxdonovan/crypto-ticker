@@ -1,0 +1,22 @@
+extends layout.pug
+
+block title 
+	| Crypto Ticker
+
+block view
+	.title Crypto Ticker
+	.ticker
+		.ticker-info.flex
+
+			.ticker-info-main.flex
+				.ticker-info-main-title ETHUSD
+				.ticker-info-main-price 410
+
+			.ticker-info-hl.flex
+				.ticker-info-hl-title High / Low
+				.ticker-info-hl-price 420 / 392 
+
+		.ticker-chart
+			.ticker-chart-waiter Please wait, chart is loading...
+
+
